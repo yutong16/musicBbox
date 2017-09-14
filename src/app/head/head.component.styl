@@ -9,19 +9,25 @@
     background-color: #333;
     .logo
         display: inline-block;
-        width: 150px;
+        width: 176px;
+        height: 70px;
         margin-left: 20px;
         text-align: center;
-        font-size: 22px;
+        float: left;
+        font-size: 0;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         letter-spacing: 1px;
         a
+            font-size: 22px;
             &:hover
                 color: red;
     .m-nav
         display: inline-block;
+        float: left;
         margin: 0;
         padding: 0;
+        height: 70px;
+        line-height: 70px;
         font-size: 14px;
         ul
             width: 100%;
@@ -30,8 +36,28 @@
                 padding: 0 20px;
                 &:hover
                     background-color: #000000;
+                .down
+                    display: block;
+                    position: relative;
+                    .down-client
+                        height: 70px;
+                        line-height: 70px;
+                        font-size: 14px;
+                    .hot
+                        display: block;
+                        position: absolute;
+                        width: 28px;
+                        top: 21px;
+                        height: 11px;
+                        left: 80px;
+                        font-size: 12px;
+                        background-image: url('../../assets/icon/hot_bg.gif');
+                        background-repeat: no-repeat;
     .m-control
         display: inline-block;
         font-size: 18px;
         float: right;
         margin-right :20px;
+        .m-search
+            display: inline-block;
+            height: 32px;
