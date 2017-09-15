@@ -1,3 +1,4 @@
+import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./foot.component.css']
 })
 export class FootComponent implements OnInit {
-
-  constructor() { }
+  user='';
+  constructor(userService:UserService) 
+  { 
+    this.user=userService.userName;
+  }
 
   ngOnInit() {
   }
