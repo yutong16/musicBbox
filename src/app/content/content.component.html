@@ -5,3 +5,27 @@
   <button nz-button [nzType]="'primary'">测试按钮</button>
   <button nz-button [nzType]="'dashed'">测试按钮</button>
 </div>
+<br>
+<div>
+  <form #contactForm="ngForm">
+    <label for="userName">用户名：</label>
+    <input type="text" name="userName" id="userName" [(ngModel)]="contactForm.name" #contactName="ngModel" required>
+    <label for="telNum">电话:</label>
+    <input type="text" name="telNum" id="telNum" [(ngModel)]="contactForm.tel">
+  </form>
+  <p>
+    表单数据为：{{contactForm.name}}
+  </p>
+  <p>
+    用户名控件的有效值：{{contactName.valid}}
+    <br>
+    用户名控件的值是否未改变：{{contactName.pristine}}
+    <br>
+    用户名控件的值是否已改变:{{contactName.dirty}}
+    <br>
+    用户名控件的值是否已被访问过：{{contactName.touched}}
+    <br>
+    用户名控件的值是否未被访问过：{{contactName.untouched}}
+  </p>
+</div>
+<input name="inputValue" id="inputValue" type="text" nz-input (change)='onChange($event)'>
